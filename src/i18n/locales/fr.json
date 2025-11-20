@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "news": "Nouveautés",
+    "blog": "Actualités",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "RoomTech",
+    "subtitle": "Votre partenaire de confiance pour la maintenance informatique à domicile",
+    "cta": "Contactez-nous",
+    "description": "Service professionnel de maintenance informatique directement chez vous"
+  },
+  "about": {
+    "title": "À propos de RoomTech",
+    "description": "RoomTech démarre avec un service de maintenance informatique professionnel. À l'avenir, nous proposerons également des prestations full-stack et d'autres services technologiques.",
+    "feature1": {
+      "title": "Service à domicile",
+      "description": "Notre technicien se déplace directement chez vous, vous n'avez pas besoin de vous déplacer."
+    },
+    "feature2": {
+      "title": "Prix négociables",
+      "description": "Des tarifs flexibles adaptés à vos besoins."
+    },
+    "feature3": {
+      "title": "Clients fidèles",
+      "description": "Des remises spéciales pour nos clients réguliers."
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "current": {
+      "title": "Services actuels",
+      "maintenance": {
+        "title": "Maintenance informatique",
+        "description": "Réparation, dépannage et maintenance de vos équipements informatiques à domicile."
+      }
+    },
+    "future": {
+      "title": "Services à venir",
+      "fullstack": {
+        "title": "Développement Full-Stack",
+        "description": "Création d'applications web complètes, frontend et backend."
+      },
+      "other": {
+        "title": "Autres services technologiques",
+        "description": "Une gamme étendue de services technologiques pour répondre à tous vos besoins."
+      }
+    }
+  },
+  "news": {
+    "title": "Nouveautés",
+    "subtitle": "Découvrez nos dernières offres et nouveaux services",
+    "noNews": "Aucune nouveauté pour le moment. Revenez bientôt !"
+  },
+  "blog": {
+    "title": "Actualités & Conseils",
+    "subtitle": "Restez informé des dernières tendances technologiques",
+    "readMore": "Lire la suite",
+    "noPosts": "Aucun article pour le moment. Revenez bientôt !"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "N'hésitez pas à nous contacter pour toute question ou demande",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "company": "RoomTech"
+  }
+}
+

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/noir.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RoomTech - Service professionnel de maintenance informatique à domicile. Réparation, dépannage et maintenance de vos équipements informatiques directement chez vous." />
+    <meta name="keywords" content="maintenance informatique, réparation ordinateur, service à domicile, RoomTech, dépannage informatique" />
+    <meta name="author" content="RoomTech" />
+    <meta property="og:title" content="RoomTech - Maintenance informatique à domicile" />
+    <meta property="og:description" content="Service professionnel de maintenance informatique à domicile. Prix négociables et remises pour clients fidèles." />
+    <meta property="og:type" content="website" />
+    <title>RoomTech - Maintenance informatique à domicile</title>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

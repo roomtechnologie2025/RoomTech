@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Guriga",
+    "about": "Ku saabsan",
+    "services": "Adeegyada",
+    "news": "Warbixinada",
+    "blog": "Blog",
+    "contact": "Xiriir"
+  },
+  "hero": {
+    "title": "RoomTech",
+    "subtitle": "Hambalye aad ku kalsoon tahay ee adeegga IT-ka gurigaaga",
+    "cta": "Nala soo xiriir",
+    "description": "Adeegga IT-ka professional ah oo toos u ah gurigaaga"
+  },
+  "about": {
+    "title": "Ku saabsan RoomTech",
+    "description": "RoomTech waxay ka bilaabantaa adeegga IT-ka professional ah. Mustaqbalka, waxaan sidoo kale bixin doonaa adeegyada full-stack iyo adeegyada teknoolojiga kale.",
+    "feature1": {
+      "title": "Adeegga guriga",
+      "description": "Teknisheenkayagu wuxuu toos u yimaadaa gurigaaga, ma u baahnid inaad safartid."
+    },
+    "feature2": {
+      "title": "Qiimaha la wada hadli karo",
+      "description": "Qiimooyin dabacsan oo u habboon baahidaada."
+    },
+    "feature3": {
+      "title": "Macmiilada daacadda ah",
+      "description": "Qiimo dhimis gaar ah macmiiladeena joogtada ah."
+    }
+  },
+  "services": {
+    "title": "Adeegyadeena",
+    "current": {
+      "title": "Adeegyada hadda jira",
+      "maintenance": {
+        "title": "Dayactirka IT-ka",
+        "description": "Hagaajin, xallinta dhibaatooyinka iyo dayactirka qalabkaaga IT-ka gurigaaga."
+      }
+    },
+    "future": {
+      "title": "Adeegyada soo socda",
+      "fullstack": {
+        "title": "Horumarka Full-Stack",
+        "description": "Abuurista codsiyada internetka oo dhamaystiran, frontend iyo backend."
+      },
+      "other": {
+        "title": "Adeegyada teknoolojiga kale",
+        "description": "Noocyo badan oo adeegyada teknoolojiga ah si aad u buuxiso baahidaada dhammaan."
+      }
+    }
+  },
+  "news": {
+    "title": "Warbixinada",
+    "subtitle": "Baro bixinta iyo adeegyadeena cusub",
+    "noNews": "Ma jiro warbixin cusub hadda. Soo noqo dhowaan!"
+  },
+  "blog": {
+    "title": "Warbixinada & Taloyin",
+    "subtitle": "Ogow heerarka ugu dambeeya ee teknoolojiga",
+    "readMore": "Akhri dheeraadka",
+    "noPosts": "Ma jiro maqaal hadda. Soo noqo dhowaan!"
+  },
+  "contact": {
+    "title": "Nala soo xiriir",
+    "subtitle": "Nala soo xiriir su'aalo ama codsi kasta",
+    "form": {
+      "name": "Magaca",
+      "email": "Email",
+      "phone": "Telefoonka",
+      "message": "Fariinta",
+      "send": "Dir",
+      "sending": "Waa la dirirayaa...",
+      "success": "Fariinta si guul leh ayaa loo diray!",
+      "error": "Qalad ayaa dhacay. Fadlan isku day mar kale."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Telefoonka"
+    }
+  },
+  "footer": {
+    "rights": "Xuquuqda oo dhan waa la hayaa",
+    "company": "RoomTech"
+  }
+}
+
