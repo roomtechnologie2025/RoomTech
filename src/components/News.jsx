@@ -8,10 +8,7 @@ const News = () => {
   const newsItems = [];
 
   return (
-    <section
-      id="news"
-      className="py-20 px-4 bg-white dark:bg-gray-900"
-    >
+    <section id="news" className="py-20 px-4 bg-white dark:bg-gray-900">
       <div className="container mx-auto max-w-7xl">
         <div className="flex items-center justify-center mb-4">
           <Sparkles className="text-roomtech-yellow mr-3" size={32} />
@@ -19,11 +16,11 @@ const News = () => {
             {t('news.title')}
           </h2>
         </div>
-        
+
         <p className="text-lg md:text-xl text-center mb-12 text-gray-600 dark:text-gray-400">
           {t('news.subtitle')}
         </p>
-        
+
         {newsItems.length === 0 ? (
           <div className="text-center py-16">
             <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-roomtech-yellow/10 dark:bg-roomtech-yellow/20 mb-6">
@@ -33,11 +30,11 @@ const News = () => {
               {t('news.noNews')}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto mb-6">
-              Stay tuned for the latest updates and announcements from RoomTech.
+              {t('news.emptyState.description')}
             </p>
             <span className="inline-flex items-center gap-2 bg-roomtech-yellow/10 dark:bg-roomtech-yellow/20 text-roomtech-yellow px-4 py-2 rounded-full text-sm font-semibold">
               <Sparkles size={16} />
-              Coming Soon
+              {t('news.emptyState.badge')}
             </span>
           </div>
         ) : (
@@ -66,4 +63,3 @@ const News = () => {
 };
 
 export default News;
-

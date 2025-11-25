@@ -70,7 +70,7 @@ const Services = () => {
                   <div className="mt-4 text-center">
                     <span className="inline-flex items-center gap-1 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 px-4 py-2 rounded-full text-sm font-semibold border border-green-300 dark:border-green-700">
                       <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                      Disponible
+                      {t('services.status.available')}
                     </span>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const Services = () => {
                   <div className="mt-4 text-center">
                     <span className="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold border border-blue-300 dark:border-blue-700">
                       <Clock size={14} />
-                      Bientôt disponible
+                      {t('services.status.comingSoon')}
                     </span>
                   </div>
                 </div>

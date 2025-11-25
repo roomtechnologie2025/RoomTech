@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { withTranslation } from 'react-i18next';
 import { AlertTriangle } from 'lucide-react';
 
 class ErrorBoundary extends Component {
@@ -16,6 +17,8 @@ class ErrorBoundary extends Component {
   }
 
   render() {
+    const { t } = this.props;
+
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
@@ -24,11 +27,10 @@ class ErrorBoundary extends Component {
               <AlertTriangle className="text-red-500" size={48} />
             </div>
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-              Something went wrong
+              {t('error.title')}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              We're sorry, but something unexpected happened. Please try
-              refreshing the page.
+              {t('error.message')}
             </p>
             <button
               onClick={() => {
@@ -37,7 +39,7 @@ class ErrorBoundary extends Component {
               }}
               className="bg-roomtech-yellow hover:bg-yellow-500 text-roomtech-black font-semibold px-6 py-3 rounded-lg transition-colors"
             >
-              Refresh Page
+              {t('error.refreshButton')}
             </button>
           </div>
         </div>
@@ -48,4 +50,4 @@ class ErrorBoundary extends Component {
   }
 }
 
-export default ErrorBoundary;
+export default withTranslation()(ErrorBoundary);

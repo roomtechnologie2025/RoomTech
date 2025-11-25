@@ -31,6 +31,10 @@
   },
   "services": {
     "title": "Our Services",
+    "status": {
+      "available": "Available",
+      "comingSoon": "Coming Soon"
+    },
     "current": {
       "title": "Current services",
       "maintenance": {
@@ -53,7 +57,11 @@
   "news": {
     "title": "News",
     "subtitle": "Discover our latest offers and new services",
-    "noNews": "No news at the moment. Come back soon!"
+    "noNews": "No news at the moment. Come back soon!",
+    "emptyState": {
+      "description": "Stay tuned for the latest updates and announcements from RoomTech.",
+      "badge": "Coming Soon"
+    }
   },
   "blog": {
     "title": "News & Tips",
@@ -77,11 +85,30 @@
     "info": {
       "email": "Email",
       "phone": "Phone"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "phoneInvalid": "Please enter a valid phone number",
+      "messageRequired": "Message is required",
+      "messageMinLength": "Message must be at least 10 characters"
     }
   },
   "footer": {
     "rights": "All rights reserved",
-    "company": "RoomTech"
+    "company": "RoomTech",
+    "navigation": "Navigation"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "message": "We're sorry, but something unexpected happened. Please try refreshing the page.",
+    "refreshButton": "Refresh Page"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "switchToLightMode": "Switch to light mode",
+    "switchToDarkMode": "Switch to dark mode"
   }
 }
-

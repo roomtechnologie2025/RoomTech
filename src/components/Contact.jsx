@@ -22,28 +22,28 @@ const Contact = () => {
     switch (name) {
       case 'name':
         if (!value.trim()) {
-          error = 'Name is required';
+          error = t('contact.validation.nameRequired');
         } else if (value.trim().length < 2) {
-          error = 'Name must be at least 2 characters';
+          error = t('contact.validation.nameMinLength');
         }
         break;
       case 'email':
         if (!value.trim()) {
-          error = 'Email is required';
+          error = t('contact.validation.emailRequired');
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-          error = 'Please enter a valid email address';
+          error = t('contact.validation.emailInvalid');
         }
         break;
       case 'phone':
         if (value && !/^[\d\s\-\+\(\)]+$/.test(value)) {
-          error = 'Please enter a valid phone number';
+          error = t('contact.validation.phoneInvalid');
         }
         break;
       case 'message':
         if (!value.trim()) {
-          error = 'Message is required';
+          error = t('contact.validation.messageRequired');
         } else if (value.trim().length < 10) {
-          error = 'Message must be at least 10 characters';
+          error = t('contact.validation.messageMinLength');
         }
         break;
       default:
@@ -128,7 +128,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className={`py-20 px-4 bg-white dark:bg-gray-900 transition-opacity duration-700 ${
+      className={`py-20 px-4 bg-gray-50 dark:bg-gray-800 transition-opacity duration-700 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >

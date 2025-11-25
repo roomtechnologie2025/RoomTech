@@ -36,7 +36,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section
-      const sections = ['home', 'about', 'services', 'news', 'blog', 'contact'];
+      const sections = ['home', 'about', 'services', 'news', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -72,7 +72,6 @@ const Header = () => {
     { id: 'about', key: 'nav.about' },
     { id: 'services', key: 'nav.services' },
     { id: 'news', key: 'nav.news' },
-    { id: 'blog', key: 'nav.blog' },
     { id: 'contact', key: 'nav.contact' },
   ];
 
@@ -166,8 +165,8 @@ const Header = () => {
             <Tooltip
               text={
                 theme === 'dark'
-                  ? 'Switch to light mode'
-                  : 'Switch to dark mode'
+                  ? t('accessibility.switchToLightMode')
+                  : t('accessibility.switchToDarkMode')
               }
             >
               <button

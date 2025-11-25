@@ -31,6 +31,10 @@
   },
   "services": {
     "title": "Nos Services",
+    "status": {
+      "available": "Disponible",
+      "comingSoon": "Bientôt disponible"
+    },
     "current": {
       "title": "Services actuels",
       "maintenance": {
@@ -53,7 +57,11 @@
   "news": {
     "title": "Nouveautés",
     "subtitle": "Découvrez nos dernières offres et nouveaux services",
-    "noNews": "Aucune nouveauté pour le moment. Revenez bientôt !"
+    "noNews": "Aucune nouveauté pour le moment. Revenez bientôt !",
+    "emptyState": {
+      "description": "Restez à l'écoute pour les dernières mises à jour et annonces de RoomTech.",
+      "badge": "Bientôt disponible"
+    }
   },
   "blog": {
     "title": "Actualités & Conseils",
@@ -77,11 +85,30 @@
     "info": {
       "email": "Email",
       "phone": "Téléphone"
+    },
+    "validation": {
+      "nameRequired": "Le nom est requis",
+      "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "phoneInvalid": "Veuillez entrer un numéro de téléphone valide",
+      "messageRequired": "Le message est requis",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères"
     }
   },
   "footer": {
     "rights": "Tous droits réservés",
-    "company": "RoomTech"
+    "company": "RoomTech",
+    "navigation": "Navigation"
+  },
+  "error": {
+    "title": "Une erreur s'est produite",
+    "message": "Nous sommes désolés, mais quelque chose d'inattendu s'est produit. Veuillez essayer de rafraîchir la page.",
+    "refreshButton": "Rafraîchir la page"
+  },
+  "accessibility": {
+    "skipToContent": "Aller au contenu principal",
+    "switchToLightMode": "Passer en mode clair",
+    "switchToDarkMode": "Passer en mode sombre"
   }
 }
-
