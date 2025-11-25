@@ -67,7 +67,11 @@
     "title": "Actualités & Conseils",
     "subtitle": "Restez informé des dernières tendances technologiques",
     "readMore": "Lire la suite",
-    "noPosts": "Aucun article pour le moment. Revenez bientôt !"
+    "noPosts": "Aucun article pour le moment. Revenez bientôt !",
+    "emptyState": {
+      "description": "Nous préparons des articles et guides pertinents sur la technologie et la maintenance informatique.",
+      "badge": "Bientôt disponible"
+    }
   },
   "contact": {
     "title": "Contactez-nous",
@@ -85,6 +89,9 @@
     "info": {
       "email": "Email",
       "phone": "Téléphone"
+    },
+    "social": {
+      "title": "Suivez-nous"
     },
     "validation": {
       "nameRequired": "Le nom est requis",
@@ -105,10 +112,5 @@
     "title": "Une erreur s'est produite",
     "message": "Nous sommes désolés, mais quelque chose d'inattendu s'est produit. Veuillez essayer de rafraîchir la page.",
     "refreshButton": "Rafraîchir la page"
-  },
-  "accessibility": {
-    "skipToContent": "Aller au contenu principal",
-    "switchToLightMode": "Passer en mode clair",
-    "switchToDarkMode": "Passer en mode sombre"
   }
 }

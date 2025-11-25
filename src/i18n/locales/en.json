@@ -64,10 +64,14 @@
     }
   },
   "blog": {
-    "title": "News & Tips",
-    "subtitle": "Stay informed about the latest technology trends",
+    "title": "Blog",
+    "subtitle": "Stay informed about the latest technology trends and tips",
     "readMore": "Read more",
-    "noPosts": "No posts at the moment. Come back soon!"
+    "noPosts": "No posts at the moment. Come back soon!",
+    "emptyState": {
+      "description": "We're preparing insightful articles and guides about technology and IT maintenance.",
+      "badge": "Coming Soon"
+    }
   },
   "contact": {
     "title": "Contact us",
@@ -85,6 +89,9 @@
     "info": {
       "email": "Email",
       "phone": "Phone"
+    },
+    "social": {
+      "title": "Follow us"
     },
     "validation": {
       "nameRequired": "Name is required",
@@ -105,10 +112,5 @@
     "title": "Something went wrong",
     "message": "We're sorry, but something unexpected happened. Please try refreshing the page.",
     "refreshButton": "Refresh Page"
-  },
-  "accessibility": {
-    "skipToContent": "Skip to main content",
-    "switchToLightMode": "Switch to light mode",
-    "switchToDarkMode": "Switch to dark mode"
   }
 }

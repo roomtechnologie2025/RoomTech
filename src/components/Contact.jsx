@@ -1,11 +1,21 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, Send, CheckCircle2, Loader2 } from 'lucide-react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import {
+  Mail,
+  Phone,
+  Send,
+  CheckCircle2,
+  Loader2,
+  Github,
+  Instagram,
+} from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const Contact = () => {
   const { t } = useTranslation();
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 });
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -128,9 +138,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className={`py-20 px-4 bg-gray-50 dark:bg-gray-800 transition-opacity duration-700 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
+      className="py-20 px-4 bg-white dark:bg-gray-900"
     >
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
@@ -332,12 +340,35 @@ const Contact = () => {
           </div>
 
           {/* Informations de contact */}
-          <div className="flex flex-col justify-center space-y-8">
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+            initial="hidden"
+            animate={isInView ? 'visible' : 'hidden'}
+            className="flex flex-col justify-center space-y-8"
+          >
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: 30 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl"
+            >
               <div className="flex items-center mb-4">
-                <div className="bg-roomtech-yellow p-3 rounded-full mr-4">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 6 }}
+                  className="bg-roomtech-yellow p-3 rounded-full mr-4"
+                >
                   <Mail className="text-roomtech-black" size={24} />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">
                     {t('contact.info.email')}
@@ -351,13 +382,23 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: 30 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl"
+            >
               <div className="flex items-center mb-4">
-                <div className="bg-roomtech-yellow p-3 rounded-full mr-4">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 6 }}
+                  className="bg-roomtech-yellow p-3 rounded-full mr-4"
+                >
                   <Phone className="text-roomtech-black" size={24} />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">
                     {t('contact.info.phone')}
@@ -371,8 +412,46 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+
+            {/* Social Links */}
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: 30 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl"
+            >
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+                {t('contact.social.title')}
+              </h3>
+              <div className="flex items-center gap-4">
+                <motion.a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our GitHub"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center justify-center w-12 h-12 bg-roomtech-yellow hover:bg-yellow-500 text-roomtech-black rounded-full shadow-lg hover:shadow-xl"
+                >
+                  <Github size={24} />
+                </motion.a>
+                <motion.a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our Instagram"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center justify-center w-12 h-12 bg-roomtech-yellow hover:bg-yellow-500 text-roomtech-black rounded-full shadow-lg hover:shadow-xl"
+                >
+                  <Instagram size={24} />
+                </motion.a>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

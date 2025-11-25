@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import Logo from './Logo';
-import Tooltip from './Tooltip';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -20,15 +19,9 @@ const Header = () => {
 
   const changeLanguage = (langCode) => {
     i18n.changeLanguage(langCode);
+    // Explicitly save to localStorage to match the detector's lookupLocalStorage key
     localStorage.setItem('language', langCode);
   };
-
-  useEffect(() => {
-    const savedLang = localStorage.getItem('language');
-    if (savedLang) {
-      i18n.changeLanguage(savedLang);
-    }
-  }, [i18n]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +29,7 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section
-      const sections = ['home', 'about', 'services', 'news', 'contact'];
+      const sections = ['home', 'about', 'services', 'news', 'blog', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -72,6 +65,7 @@ const Header = () => {
     { id: 'about', key: 'nav.about' },
     { id: 'services', key: 'nav.services' },
     { id: 'news', key: 'nav.news' },
+    { id: 'blog', key: 'nav.blog' },
     { id: 'contact', key: 'nav.contact' },
   ];
 
@@ -79,7 +73,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 shadow-lg glass'
+          ? 'bg-white/95 dark:bg-gray-900/95 shadow-lg'
           : 'bg-white/90 dark:bg-gray-900/90 shadow-md'
       }`}
       role="banner"
@@ -162,21 +156,13 @@ const Header = () => {
             </div>
 
             {/* Theme Toggle */}
-            <Tooltip
-              text={
-                theme === 'dark'
-                  ? t('accessibility.switchToLightMode')
-                  : t('accessibility.switchToDarkMode')
-              }
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Toggle theme"
             >
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-            </Tooltip>
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
 
             {/* Mobile Menu Button */}
             <button

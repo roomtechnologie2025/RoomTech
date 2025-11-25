@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { ArrowDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Logo from './Logo';
 
 const Hero = () => {
@@ -19,52 +20,84 @@ const Hero = () => {
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none bg-pattern">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-roomtech-yellow/10 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-roomtech-yellow/5 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
-        ></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-roomtech-yellow/5 via-transparent to-roomtech-yellow/5 rounded-full blur-3xl"></div>
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-20 left-10 w-72 h-72 bg-roomtech-yellow/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.3, 1], opacity: [0.05, 0.1, 0.05] }}
+          transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+          className="absolute bottom-20 right-10 w-96 h-96 bg-roomtech-yellow/5 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], opacity: [0.05, 0.08, 0.05] }}
+          transition={{ duration: 6, repeat: Infinity }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-roomtech-yellow/5 via-transparent to-roomtech-yellow/5 rounded-full blur-3xl"
+        />
       </div>
 
       <div className="container mx-auto max-w-7xl text-center relative z-10">
-        <div className="mb-8 flex justify-center animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 flex justify-center"
+        >
           <Logo className="scale-150" />
-        </div>
+        </motion.div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white animate-slide-up gradient-text">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-roomtech-yellow to-yellow-500 bg-clip-text text-transparent leading-tight tracking-tight drop-shadow-sm dark:drop-shadow-md"
+        >
           {t('hero.title')}
-        </h1>
+        </motion.h1>
 
-        <p
-          className="text-xl md:text-2xl mb-4 text-gray-700 dark:text-gray-300 animate-slide-up"
-          style={{ animationDelay: '0.1s' }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl md:text-2xl mb-4 text-gray-700 dark:text-gray-300 leading-relaxed tracking-wide"
         >
           {t('hero.subtitle')}
-        </p>
+        </motion.p>
 
-        <p
-          className="text-lg md:text-xl mb-12 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto animate-slide-up"
-          style={{ animationDelay: '0.2s' }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-lg md:text-xl mb-12 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed tracking-wide"
         >
           {t('hero.description')}
-        </p>
+        </motion.p>
 
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={scrollToContact}
           aria-label="Go to contact section"
-          className="bg-roomtech-yellow hover:bg-yellow-500 text-roomtech-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-roomtech-yellow/50 animate-slide-up"
-          style={{ animationDelay: '0.3s' }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="bg-roomtech-yellow hover:bg-yellow-500 text-roomtech-black font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl hover:shadow-roomtech-yellow/50"
         >
           {t('hero.cta')}
-        </button>
+        </motion.button>
 
-        <div className="mt-16 animate-bounce" aria-hidden="true">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="mt-16"
+          aria-hidden="true"
+        >
           <ArrowDown
             className="mx-auto text-gray-400 dark:text-gray-500"
             size={32}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
