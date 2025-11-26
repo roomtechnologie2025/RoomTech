@@ -86,12 +86,3 @@ section:last-of-type::after {
     padding-bottom: 6rem;
   }
 }
-
-
-
-/* Subtle background pattern */
-.bg-pattern {
-  background-image: 
-    radial-gradient(circle at 1px 1px, rgba(255, 215, 0, 0.1) 1px, transparent 0);
-  background-size: 20px 20px;
-}

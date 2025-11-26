@@ -78,7 +78,7 @@ const Header = () => {
       }`}
       role="banner"
     >
-      <nav className="container mx-auto px-4 py-4" aria-label="Main navigation">
+      <nav className="container mx-auto px-4 py-3" aria-label="Main navigation">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div
@@ -104,16 +104,13 @@ const Header = () => {
                 onClick={() => scrollToSection(item.id)}
                 aria-label={`Navigate to ${t(item.key)} section`}
                 aria-current={activeSection === item.id ? 'page' : undefined}
-                className={`relative px-3 py-2 rounded-md transition-all duration-300 ${
+                className={`px-3 py-2 rounded-md transition-all duration-300 ${
                   activeSection === item.id
                     ? 'text-roomtech-yellow font-semibold'
                     : 'text-gray-700 dark:text-gray-300 hover:text-roomtech-yellow'
                 }`}
               >
                 {t(item.key)}
-                {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-roomtech-yellow rounded-full" />
-                )}
               </button>
             ))}
           </div>

@@ -10,8 +10,7 @@
   "hero": {
     "title": "RoomTech",
     "subtitle": "Hambalye aad ku kalsoon tahay ee adeegga IT-ka gurigaaga",
-    "cta": "Nala soo xiriir",
-    "description": "Adeegga IT-ka professional ah oo toos u ah gurigaaga"
+    "cta": "Nala soo xiriir"
   },
   "about": {
     "title": "Ku saabsan RoomTech",
@@ -84,4 +83,3 @@
     "company": "RoomTech"
   }
 }
-
